@@ -68,7 +68,7 @@ settlement runs, and can suspend a merchant.
 
 ## Open Questions
 
-1. Which mobile-money provider(s) and which card processor should the platform integrate with?
+None at this time.
 
 ## Further Notes
 
