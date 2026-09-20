@@ -1,0 +1,12 @@
+{
+  "name": "mobile-money-service",
+  "resource": {
+    "name": "mobile-money-service",
+    "description": "Collects a payer's mobile-money payment against a merchant's payment request, in Kenyan Shillings."
+  },
+  "suggestions": [
+    { "name": "M-Pesa Daraja API", "description": "Safaricom's official API for M-Pesa STK Push and C2B collections — the dominant mobile-money rail in Kenya." },
+    { "name": "Flutterwave", "description": "Pan-African payment aggregator that includes M-Pesa and other Kenyan mobile-money collection under one API." },
+    { "name": "Pesapal", "description": "Kenya-based payment gateway supporting M-Pesa and other East African mobile-money collection." }
+  ]
+}

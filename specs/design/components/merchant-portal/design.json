@@ -1,0 +1,17 @@
+{
+  "name": "merchant-portal",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "merchant-portal",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "component", "name": "payments-api" },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" }
+  ],
+  "description": "Authenticated web portal for two roles: Merchants manage their business profile and payout destination, create payment requests, track transactions and balance, issue refunds and request payouts; Platform Admins view merchants and transactions platform-wide, monitor payout runs, and suspend a merchant. Does not host the public payer checkout.",
+  "stories": [1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15],
+  "skillsPinned": ["wireframes", "react-webapp", "oxygen-ui-design-system", "thunder-authentication"]
+}

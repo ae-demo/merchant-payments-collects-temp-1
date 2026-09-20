@@ -1,0 +1,21 @@
+{
+  "name": "payments-api",
+  "type": "service",
+  "version": "0.1.0",
+  "language": "Ballerina",
+  "buildpack": "docker",
+  "appPath": "payments-api",
+  "entrypoint": "deployment/service",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "platform-resource", "name": "payments-db", "resourceType": "postgres-cnpg" },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" },
+    { "kind": "external", "name": "mobile-money-service", "description": "Charges a payer's mobile-money wallet for a payment request." },
+    { "kind": "external", "name": "card-payment-service", "description": "Charges a payer's card for a payment request." },
+    { "kind": "external", "name": "payout-service", "description": "Disburses a merchant's on-demand payout to their bank account or mobile wallet." },
+    { "kind": "external", "name": "email-service", "description": "Sends payer receipts and merchant payout notifications." }
+  ],
+  "description": "Backend API for the merchant payments platform: merchant accounts and profiles, payment requests, transaction collection via mobile money and card, refunds, balances, and on-demand payouts. Also exposes platform-admin views over merchants, transactions and payouts. Does not host any UI and does not run scheduled settlement — every payout is triggered by an explicit merchant request.",
+  "stories": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "skillsPinned": ["openapi-conventions", "ballerina", "api-management", "thunder-authentication"]
+}

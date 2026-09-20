@@ -1,0 +1,12 @@
+{
+  "name": "card-payment-service",
+  "resource": {
+    "name": "card-payment-service",
+    "description": "Collects a payer's card payment against a merchant's payment request, in Kenyan Shillings."
+  },
+  "suggestions": [
+    { "name": "Flutterwave", "description": "Pan-African card acquiring alongside mobile-money collection, under one API." },
+    { "name": "Pesapal", "description": "Kenya-based gateway with card acquiring alongside M-Pesa collection." },
+    { "name": "Stripe", "description": "Global card processor; usable for card acquiring though it has no direct Kenyan mobile-money leg." }
+  ]
+}

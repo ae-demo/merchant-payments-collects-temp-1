@@ -1,0 +1,12 @@
+{
+  "name": "payout-service",
+  "resource": {
+    "name": "payout-service",
+    "description": "Pays out a merchant's collected balance to their Kenyan bank account or mobile-money wallet on request."
+  },
+  "suggestions": [
+    { "name": "M-Pesa Daraja API (B2C)", "description": "Safaricom's B2C API to disburse funds directly to a mobile-money wallet." },
+    { "name": "Flutterwave", "description": "Supports payouts to Kenyan bank accounts and mobile-money wallets from the same account used for collection." },
+    { "name": "Pesapal", "description": "Supports disbursement to Kenyan bank accounts and mobile-money wallets." }
+  ]
+}

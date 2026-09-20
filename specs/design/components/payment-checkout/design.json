@@ -1,0 +1,16 @@
+{
+  "name": "payment-checkout",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "payment-checkout",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "component", "name": "payments-api" }
+  ],
+  "description": "Public, unauthenticated checkout page a Payer opens from a merchant's payment request link: shows the amount owed, lets the payer pay via mobile money or card, and shows the receipt. Carries no sign-in and no merchant or admin views.",
+  "stories": [5, 6, 7],
+  "skillsPinned": ["wireframes", "react-webapp", "oxygen-ui-design-system"]
+}

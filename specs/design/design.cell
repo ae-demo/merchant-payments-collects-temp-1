@@ -1,0 +1,27 @@
+title Merchant Payments Platform
+
+component merchant-portal as "Merchant & Admin Portal" web-application
+component payment-checkout as "Payment Checkout" web-application
+component payments-api as "Payments API" service
+component payments-db as "Payments Database" database
+
+east user-auth as "Thunder Auth" identity-server
+south mobile-money-service as "Mobile Money Service" service
+south card-payment-service as "Card Payment Service" service
+south payout-service as "Payout Service" service
+south email-service as "Email Service" service
+
+north -> merchant-portal
+north -> payment-checkout
+
+merchant-portal -> payments-api
+merchant-portal -> user-auth
+
+payment-checkout -> payments-api
+
+payments-api -> payments-db
+payments-api -> user-auth
+payments-api -> mobile-money-service
+payments-api -> card-payment-service
+payments-api -> payout-service
+payments-api -> email-service
