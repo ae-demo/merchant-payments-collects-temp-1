@@ -53,7 +53,8 @@ settlement runs, and can suspend a merchant.
 - **Payment scope**: one-time payments only (checkout-style payment requests); recurring/subscription billing is not part of this product.
 - **Merchant onboarding gate**: a new merchant account can create payment requests and collect payments immediately after sign-up; there is no admin approval gate. A Platform Admin can still view new merchants and suspend one after the fact.
 - **Settlement schedule**: merchants are settled on demand only — a merchant requests a payout and the platform pays it out; there is no automatic recurring settlement run.
-- **Currency scope**: the platform operates in a single currency at launch.
+- **Currency scope**: the platform operates in a single currency at launch — Kenyan Shilling (KES).
+- **Settlement geography**: the platform serves merchants and payers in Kenya, settling payouts to Kenyan bank accounts or mobile-money wallets. No specific payout rail/provider has been named yet — it will be chosen when the corresponding dependency is defined at design time.
 - **Refund window**: a merchant can refund a transaction at any time after collection, with no fixed cutoff window. *assumed*
 - **Payment receipts**: receipts and payment confirmations are sent to the payer by email. *assumed*
 
@@ -68,7 +69,6 @@ settlement runs, and can suspend a merchant.
 ## Open Questions
 
 1. Which mobile-money provider(s) and which card processor should the platform integrate with?
-2. Which countries/currencies and which bank or mobile-wallet payout rails must settlement support?
 
 ## Further Notes
 
