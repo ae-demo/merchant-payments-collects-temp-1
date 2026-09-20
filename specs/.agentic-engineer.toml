@@ -1,0 +1,4 @@
+apiVersion = "agentic-engineer/v1"
+name = "merchant-payments-collects-temp-1"
+createdAt = "2026-09-20T03:48:39Z"
+idea = "Build a merchant payments platform that collects mobile-money and card payments,"
