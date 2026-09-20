@@ -32,14 +32,14 @@ settlement runs, and can suspend a merchant.
 
 1. As a Merchant, I want to sign up and create a merchant account, so that I can start accepting payments.
 2. As a Merchant, I want to set up my business profile and payout destination (bank account or mobile wallet), so that settlements are sent to the right place.
-3. As a Platform Admin, I want to review and approve new merchant accounts, so that only vetted businesses can collect payments on the platform.
+3. As a Platform Admin, I want to view newly registered merchant accounts, so that I can monitor onboarding and flag any that need a closer look.
 4. As a Merchant, I want to create a payment request for a specific amount, so that I can send it to a customer to pay.
 5. As a Payer, I want to pay a merchant's payment request via mobile money, so that I can complete my purchase.
 6. As a Payer, I want to pay a merchant's payment request via card, so that I can complete my purchase.
 7. As a Payer, I want to receive a receipt after paying, so that I have proof of payment.
 8. As a Merchant, I want to view a dashboard of my transactions, so that I can track what has been collected.
 9. As a Merchant, I want to see my current balance and settlement history, so that I know how much I will be paid out and when.
-10. As a Merchant, I want to receive payouts of my collected funds on a schedule, so that the money reaches my bank account or mobile wallet automatically.
+10. As a Merchant, I want to be notified when a payout I requested completes, so that I know my funds have reached my bank account or mobile wallet.
 11. As a Merchant, I want to request an on-demand payout, so that I can access my funds sooner when I need to.
 12. As a Merchant, I want to issue a refund to a payer, so that I can handle returns or disputes.
 13. As a Platform Admin, I want to view all transactions across every merchant, so that I can monitor platform health and investigate issues.
@@ -51,9 +51,9 @@ settlement runs, and can suspend a merchant.
 - **Sign-in**: all actors sign in via SSO through Thunder, the platform IDP (org default).
 - **Payment collection channels**: the platform collects mobile-money payments and card payments. No specific mobile-money or card processor has been named yet — the provider(s) will be chosen when the corresponding dependency is defined at design time.
 - **Payment scope**: one-time payments only (checkout-style payment requests); recurring/subscription billing is not part of this product.
-- **Merchant onboarding gate**: a new merchant account is reviewed and approved by a Platform Admin before it can create payment requests, rather than being able to collect payments immediately on sign-up. *assumed*
-- **Settlement schedule**: merchants are settled automatically on a recurring schedule (e.g. daily), in addition to being able to request an on-demand payout. *assumed*
-- **Currency scope**: the platform operates in a single currency at launch. *assumed*
+- **Merchant onboarding gate**: a new merchant account can create payment requests and collect payments immediately after sign-up; there is no admin approval gate. A Platform Admin can still view new merchants and suspend one after the fact.
+- **Settlement schedule**: merchants are settled on demand only — a merchant requests a payout and the platform pays it out; there is no automatic recurring settlement run.
+- **Currency scope**: the platform operates in a single currency at launch.
 - **Refund window**: a merchant can refund a transaction at any time after collection, with no fixed cutoff window. *assumed*
 - **Payment receipts**: receipts and payment confirmations are sent to the payer by email. *assumed*
 
